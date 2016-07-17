@@ -1,6 +1,6 @@
 #/bin/bash
 
-set -xe
+set -x
 
 let num_git_changes="$(git status --porcelain | wc -l || true)"
 let num_git_changes="$(printf '%s\n' "$num_git_changes")"
