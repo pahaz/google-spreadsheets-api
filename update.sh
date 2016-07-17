@@ -10,6 +10,7 @@ if [ "$num_git_changes" != "0" ]; then
 fi
 
 python setup.py build sdist upload
+
 VERSION=$(python setup.py --version)
 NAME=$(python setup.py --name)
 NEXTVERSION=`echo $VERSION | python3 -c "v = input().strip().split('.'); v[-1] = str(int(v[-1]) + 1); print('.'.join(v))"`
