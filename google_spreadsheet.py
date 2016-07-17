@@ -6,7 +6,7 @@ Packages required: oauth2client, google-api-python-client
 from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient import discovery
 
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 
 
 def get_credentials(filename, scopes):
