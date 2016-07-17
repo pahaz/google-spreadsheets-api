@@ -41,10 +41,10 @@ You can use it for export your user data to the google spreadsheet.
 And sharing this data to all around the world or sharing to specific users.
 
 Usage examples
-==============
+--------------
 
 Example 1: create spreadsheet
------------------------------
+=============================
 
 .. code-block:: py
 
@@ -64,7 +64,7 @@ Example 1: create spreadsheet
 
 
 Example 2: append row to existing spreadsheet
----------------------------------------------
+=============================================
 
 .. code-block:: py
 
