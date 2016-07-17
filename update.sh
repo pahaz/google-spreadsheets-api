@@ -1,9 +1,10 @@
 #/bin/bash
 
-set -e
+set -ex
 
-# check uncommited files!
-git diff --cached --exit-code && (echo "please commit or stash changes" && exit 1)
+let num_git_changes="$(git status --porcelain | wc -l)"
+let num_git_changes="$(printf '%s\n' "$num_git_changes")"
+[ "$num_git_changes" != "0" ] && (echo "please commit or stash changes before" && exit 1)
 
 python setup.py build sdist upload
 VERSION=$(python setup.py --version)
