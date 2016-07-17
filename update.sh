@@ -9,7 +9,11 @@ if [ "$num_git_changes" != "0" ]; then
     exit 1
 fi
 
-python setup.py build sdist upload || (echo "build and upload problem" && exit 1)
+python setup.py build sdist upload
+if [ "$?" != "0" ]; then
+    echo "build and upload problem"
+    exit 2
+fi
 
 VERSION=$(python setup.py --version)
 NAME=$(python setup.py --name)
