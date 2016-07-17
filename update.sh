@@ -4,7 +4,10 @@ set -ex
 
 let num_git_changes="$(git status --porcelain | wc -l)"
 let num_git_changes="$(printf '%s\n' "$num_git_changes")"
-[ "$num_git_changes" != "0" ] && (echo "please commit or stash changes before" && exit 1)
+if [ "$num_git_changes" != "0" ]; then
+	echo "please commit or stash changes before" 
+	exit 1
+fi
 
 python setup.py build sdist upload
 VERSION=$(python setup.py --version)
