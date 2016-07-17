@@ -107,7 +107,7 @@ setup(
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=[
         'oauth2client>=2.2.0',
-        'apiclient>=1.0.3',
+        'google-api-python-client>=1.5.1',
     ],
 
     # List additional groups of dependencies here (e.g. development
@@ -115,7 +115,7 @@ setup(
     # for example:
     # $ pip install -e .[dev,test]
     extras_require={
-        'dev': ['check-manifest'],
+        'dev': ['check-manifest', 'docutils', 'Pygments'],
         # 'test': [
         #     'tox>=1.8.1',
         # ],

@@ -8,12 +8,12 @@ Requirements
 -------------
 
 * `oauth2client`_
-* `apiclient`_
+* `googleapiclient`_
 
 Installation
 ============
 
-`google-spreadsheets-api`_ is on PyPI, so simply run:
+`google_spreadsheet`_ is on PyPI, so simply run:
 
 ::
 
@@ -83,6 +83,8 @@ Example 2: append row to existing spreadsheet
     if __name__ == '__main__':
         append_data_example()
 
+
 .. _Pahaz Blinov: https://github.com/pahaz/
 .. _oauth2client: https://github.com/google/oauth2client/
-.. _apiclient: https://github.com/shazow/apiclient/
+.. _googleapiclient: https://github.com/google/google-api-python-client/
+.. _google_spreadsheet: https://pypi.python.org/pypi/google_spreadsheet/
