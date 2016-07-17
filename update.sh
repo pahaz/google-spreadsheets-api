@@ -9,6 +9,8 @@ if [ "$num_git_changes" != "0" ]; then
     exit 1
 fi
 
+set -e 
+
 python setup.py build sdist upload
 
 VERSION=$(python setup.py --version)
