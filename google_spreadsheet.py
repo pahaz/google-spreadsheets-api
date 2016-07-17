@@ -6,7 +6,7 @@ Packages required: oauth2client, google-api-python-client
 from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient import discovery
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 
 def get_credentials(filename, scopes):
@@ -35,6 +35,10 @@ class Spreadsheet(API):
     @property
     def id(self):
         return self._info['spreadsheetId']
+
+    @property
+    def url(self):
+        return "https://docs.google.com/spreadsheets/d/%s/edit#gid=0" % self.id
 
     @property
     def permissions(self):
